@@ -1,0 +1,182 @@
+CREATE TABLE "DONATION" (
+  "Donation_no" <type>,
+  "Donation_type" <type>,
+  "Donor_id" <type>,
+  "Donation_time" <type>,
+  PRIMARY KEY ("Donation_no", "Donation_type")
+);
+
+CREATE INDEX "FK" ON  "DONATION" ("Donor_id");
+
+CREATE TABLE "FUND" (
+  "Donation_no" <type>,
+  "Donation_type" <type>,
+  "D_amount" <type>
+);
+
+CREATE INDEX "FK" ON  "FUND" ("Donation_no", "Donation_type");
+
+
+CREATE TABLE "RELIEF BUYING" (
+  "Item_id" <type>,
+  "item_unit" <type>
+);
+
+CREATE INDEX "FK" ON  "RELIEF BUYING" ("Item_id", "item_unit");
+
+
+CREATE TABLE "DONATION PRODUCT" (
+  "Donation_no" <type>,
+  "Donation_type" <type>,
+  "Item_id" <type>,
+  "item_name" <type>,
+  "item_unit" <type>
+);
+
+CREATE INDEX "FK" ON  "DONATION PRODUCT" ("Donation_no", "Donation_type", "Item_id", "item_name", "item_unit");
+
+CREATE TABLE "DONOR" (
+  "Donor_id" <type>,
+  "D_name" <type>,
+  "D_adress" <type>,
+  "D_mobile" <type>,
+  PRIMARY KEY ("Donor_id")
+);
+
+
+CREATE TABLE EMPLOYEES (
+  EMPLOYEE_ID number,
+  CAMP_ID number,
+  E_FNAME varchar(255),
+  E_LNAME varchar(255),
+  E_CONTACT_NO number,
+  E_SALARY number,
+  E_JOB_ID varchar(255),
+
+  PRIMARY KEY (EMPLOYEE_ID)
+);
+
+CREATE INDEX FK ON EMPLOYEES (CAMP_ID);
+
+
+
+
+
+
+CREATE TABLE RELIEF_AMOUNT (
+  RELIEF_SERIAL_NO number,
+  ITEM_ID number,
+  ITEM_AMOUNT number
+);
+
+CREATE INDEX FK ON  RELIEF_AMOUNT (RELIEF_SERIAL_NO, ITEM_ID);
+
+CREATE TABLE RELIEF (
+  RELIEF_SERIAL_NO number,
+  ROHINGYA_ID number,
+  RELIRF_GIVEN_TIME date,
+  RELIEF_GIVEN_BY number,
+  PRIMARY KEY (RELIEF_SERIAL_NO)
+);
+
+CREATE INDEX FK ON RELIEF (RELIEF_SERIAL_NO,RELIEF_GIVEN_BY);
+
+CREATE TABLE RELIEF_ITEM (
+  ITEM_ID number,
+  ITEM_NAME varchar(255),
+  ITEM_TYPE varchar(255),
+  ITEM_COST_PER_UNIT number,
+  PRIMARY KEY (ITEM_ID)
+);
+
+
+CREATE TABLE DISEASE_DETECTION (
+  DISEASE_ID number,
+  DETECTED_BY_EMPLOYEE_ID number,
+  ROHINGYA_ID number,
+  DATE_OF_DETECTION date,
+  DATE_OF_RELEASE date,
+);
+
+CREATE INDEX FK ON  DISEASE_DETECTION (DISEASE_ID, DETECTED_BY_EMPLOYEE_ID, ROHINGYA_ID);
+
+
+
+CREATE TABLE PGREGNANCY (
+  ROHINGYA_ID number,
+  PREG_START_DATE date
+);
+
+CREATE INDEX PK_FK ON DEATH (ROHINGYA_ID);
+
+
+
+CREATE TABLE DEATH (
+  ROHINGYA_ID number,
+  DATE_OF_DEATH date
+);
+
+CREATE INDEX PK_FK ON DEATH (ROHINGYA_ID);
+
+
+CREATE TABLE NEW_BORN (
+  ROHINGYA_ID number,
+  MOTHER_ID number
+);
+
+CREATE INDEX PK_FK ON  NEW_BORN (ROHINGYA_ID);
+
+
+
+CREATE TABLE DISEASE (
+  DISEASE_ID number,
+  D_NAME varchar(255),
+  D_TYPE varchar(255),
+  D_DEPARTMENT varchar(255),
+  PRIMARY KEY (DISEASE_ID)
+);
+
+CREATE TABLE ROHINGYA_TABLE (
+  ROHINGYA_ID number,
+  CAMP_ID number,
+  R_FNAME varchar(255),
+  R_LNAME varchar(255),
+  R_AGE number,
+  R_ADRESS varchar(255),
+  R_GUARDIAN_ID number,
+  R_ENTERING_DATE date,
+  R_EMPLOYEE_ID number,
+
+  PRIMARY KEY (ROHINGYA_ID)
+);
+
+CREATE INDEX FK ON  ROHINGYA (CAMP_ID);
+CREATE INDEX FK ON  ROHINGYA (R_EMPLOYEE_ID);
+
+CREATE TABLE CAMP (
+  CAMP_ID int,
+  C_NAME varchar(255),
+  C_LOCATION varchar(255),
+  C_CAPACITY int,
+  C_MANAGER_ID int,
+  PRIMARY KEY (CAMP_ID)
+);
+CREATE INDEX FK ON CAMP (C_MANAGER_ID);
+
+
+
+PROBLEMS:  (> ORA-00955: name is already used by an existing object)
+__________
+CREATE INDEX PK_FK ON DEATH (ROHINGYA_ID);
+CREATE INDEX PK_FK ON PREGNANCY (ROHINGYA_ID);
+CREATE INDEX FK ON  DISEASE_DETECTION (DISEASE_ID, DETECTED_BY_EMPLOYEE_ID, ROHINGYA_ID);
+CREATE INDEX PK_FK ON RELIEF_STORAGE (ITEM_ID);
+CREATE INDEX FK ON RELIEF (RELIEF_SERIAL_NO,RELIEF_GIVEN_BY);
+CREATE INDEX FK ON  RELIEF_AMOUNT (RELIEF_SERIAL_NO, ITEM_ID);
+CREATE INDEX FK ON EMPLOYEES (CAMP_ID);
+
+
+
+
+
+
