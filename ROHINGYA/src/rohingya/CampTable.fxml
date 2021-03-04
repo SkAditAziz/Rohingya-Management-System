@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="javafxapplication16.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <TableView fx:id="table" layoutX="17.0" layoutY="72.0" prefHeight="368.0" prefWidth="466.0">
+        <columns>
+          <TableColumn fx:id="CAMP_ID" prefWidth="68.0" text="CAMP_ID" />
+          <TableColumn fx:id="C_NAME" prefWidth="74.0" text="C_NAME" />
+            <TableColumn fx:id="C_LOCATION" prefWidth="97.0" text="C_LOCATION" />
+            <TableColumn fx:id="C_CAPACITY" prefWidth="79.0" text="C_CAPACITY" />
+            <TableColumn fx:id="C_MANAGER_ID" prefWidth="117.0" text="C_MANAGER_ID" />
+        </columns>
+      </TableView>
+    </children>
+</AnchorPane>
