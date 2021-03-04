@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="591.0" prefWidth="1168.0" style="-fx-background-color: #dbfbfa;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user.UserpageController">
+   <children>
+      <CheckBox fx:id="rbox" layoutX="119.0" layoutY="46.0" mnemonicParsing="false" onAction="#handleRbox" text="Want To Know About  Rohingya??">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="bbox" layoutX="119.0" layoutY="254.0" mnemonicParsing="false" onAction="#handleBbox" text="Want To Know Birth Rate Of a Camp??">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="cbox" layoutX="124.0" layoutY="407.0" mnemonicParsing="false" onAction="#handleCbox" text="Want To Know Death Rate Of a Camp??">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="dbox" layoutX="637.0" layoutY="73.0" mnemonicParsing="false" onAction="#handleDbox" text="Want To Know About Disease Affection??">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="reliefbox" layoutX="639.0" layoutY="300.0" mnemonicParsing="false" onAction="#handleReliefbox" text="Want To Provide Any Relief !?" textFill="#f20000" textOverrun="CLIP">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </CheckBox>
+      <Label fx:id="rlabel" layoutX="161.0" layoutY="177.0" text="ROHINGYA ID :" textFill="#170686">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textrid" layoutX="270.0" layoutY="174.0" style="#dbfbfa-fx-background-color: #dbfbfa;" />
+      <ComboBox fx:id="birthbox" layoutX="211.0" layoutY="305.0" prefHeight="25.0" prefWidth="119.0" promptText="SELECT CAMP" />
+      <ComboBox fx:id="deathBox" layoutX="221.0" layoutY="459.0" prefHeight="25.0" prefWidth="119.0" promptText="SELECT CAMP" />
+      <RadioButton fx:id="totaldiseasebutton" layoutX="697.0" layoutY="138.0" mnemonicParsing="false" onAction="#handleintotal" text="IN TOTAL" textFill="#ff0059">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="disease" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="particularcampbutton" layoutX="697.0" layoutY="177.0" mnemonicParsing="false" onAction="#handlediseasecamp" text="IN PARTICULAR CAMP" textFill="#ff0059" toggleGroup="$disease">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </RadioButton>
+      <ComboBox fx:id="diseasecamp" layoutX="719.0" layoutY="229.0" prefHeight="25.0" prefWidth="119.0" promptText="SELECT CAMP" />
+      <ComboBox fx:id="reliefcombo" layoutX="860.0" layoutY="371.0" prefWidth="150.0" promptText="RELIEF ITEM NAME" />
+      <Button fx:id="Rokbutton" layoutX="433.0" layoutY="174.0" mnemonicParsing="false" onAction="#handleRok" style="-fx-background-color: #ff6600;" text="OK" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="Bokbutton" layoutX="394.0" layoutY="305.0" mnemonicParsing="false" onAction="#handleBok" style="-fx-background-color: #ff6600;" text="OK" textFill="#fff9f9">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="Cok" layoutX="394.0" layoutY="459.0" mnemonicParsing="false" onAction="#handleCok" style="-fx-background-color: #ff6600;" text="OK" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="Dok" layoutX="871.0" layoutY="229.0" mnemonicParsing="false" onAction="#handleDok" style="-fx-background-color: #ff6600;" text="OK" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="Relliefbutton" layoutX="976.0" layoutY="416.0" mnemonicParsing="false" onAction="#handlereliefbutton" style="-fx-background-color: #ff6600;" text="GO" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Text fx:id="selectreiefitem" layoutX="719.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SELECT AN ITEM :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text fx:id="nowyousee" layoutX="719.0" layoutY="433.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOW YOU SEE THE SCENERIO -&gt;">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Button fx:id="totalscenebutton" layoutX="204.0" layoutY="108.0" mnemonicParsing="false" onAction="#handletotalscene" style="-fx-background-color: #4f00ff; -fx-background-radius: 50;" text="SEE TOTAL SCENERIO" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="logoutbutton" layoutX="1064.0" layoutY="21.0" mnemonicParsing="false" onAction="#handlelogout" style="-fx-background-color: #000000;" text="LOG OUT" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Text fx:id="printbirthrate" fill="#ab0909" layoutX="119.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="391.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="376.0" prefWidth="429.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pregnancy.PregnancyController">
+   <children>
+      <GridPane layoutX="89.0" layoutY="124.0" prefHeight="116.0" prefWidth="246.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="PREGNANT'S ID">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="START DATE" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DOCTOR'S ID" GridPane.rowIndex="2" />
+            <TextField fx:id="pid" promptText="ROHINGYA ID" GridPane.columnIndex="1" />
+            <TextField fx:id="docid" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <DatePicker fx:id="psdate" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Text fill="#ff0d9c" layoutX="123.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PGEGNANCY RECORD">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Button fx:id="pok" layoutX="302.0" layoutY="259.0" mnemonicParsing="false" onAction="#handlepok" style="-fx-background-color: #f477e2;" text="OK" textFill="WHITE" />
+      <Button fx:id="pshow" layoutX="89.0" layoutY="259.0" mnemonicParsing="false" onAction="#handlepshow" style="-fx-border-color: #f477e2;" text="SHOW TABLE" />
+      <Button fx:id="home" layoutX="352.0" layoutY="28.0" mnemonicParsing="false" onAction="#handlehome" style="-fx-background-color: #850cc2;" text="HOME" textFill="#f5f5f5">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
