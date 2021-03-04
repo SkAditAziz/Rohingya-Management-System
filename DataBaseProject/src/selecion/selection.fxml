@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="312.0" prefWidth="486.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="selecion.SelectionController">
+   <children>
+      <Label layoutX="134.0" layoutY="150.0" prefHeight="25.0" prefWidth="51.0" text="SELECT" textFill="#eb080f">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="selectbutton" layoutX="388.0" layoutY="228.0" mnemonicParsing="false" onAction="#selectbuttonaction" style="-fx-background-color: #2196F3;" text="OK" textFill="WHITE" />
+      <ChoiceBox fx:id="choiceBox" layoutX="230.0" layoutY="150.0" onDragDetected="#choiceboxaction" prefWidth="150.0" />
+      <Text fill="#035c7c" layoutX="147.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="YOUR DESIGNATION??">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Text>
+      <RadioButton fx:id="register" layoutX="177.0" layoutY="80.0" mnemonicParsing="false" onAction="#handleReg" text="Register">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="selection" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="manager" layoutX="68.0" layoutY="80.0" mnemonicParsing="false" onAction="#handleM" text="Manager" toggleGroup="$selection">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="doctor" layoutX="283.0" layoutY="80.0" mnemonicParsing="false" onAction="#handleD" text="Doctor" toggleGroup="$selection">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </RadioButton>
+      <Button fx:id="logout" layoutX="75.0" layoutY="228.0" mnemonicParsing="false" onAction="#handlelogout" style="-fx-background-color: #d61c51;" text="LOG OUT" textFill="WHITE" />
+      <Button fx:id="go" layoutX="387.0" layoutY="77.0" mnemonicParsing="false" onAction="#handlego" text="GO">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
