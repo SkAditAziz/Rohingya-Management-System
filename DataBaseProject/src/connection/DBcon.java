@@ -20,9 +20,9 @@ public class DBcon {
 
     public Connection connect(){
         try{
-            System.out.println("aaaaa");
+            //System.out.println("aaaaa");
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            System.out.println("bbb");
+            //System.out.println("bbb");
             con= DriverManager.getConnection(
                     "jdbc:oracle:thin:@localhost:1521/orcl","ROHINGYA","adit");
             System.out.println("Connection on = " + !con.isClosed());
